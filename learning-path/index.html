@@ -1,0 +1,383 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>如果重回大二，我会这样学Java | qyh - Java学长的自救手记</title><meta name="author" content="Java学长"><meta name="copyright" content="Java学长"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="写在前面的话   这条路线不是最快的，但绝对是我踩过无数坑后，最适合二本学生的路线。   当年我走了太多弯路：追求热门技术、只学不练、盲目刷算法题。现在回头看，其实掌握核心基础、多动手实践才是关键。   这是我回到母校给学弟学妹分享的经验总结，希望能帮你少走弯路。   🌱 第一阶段：夯实基础（2-3个月）        1. Java语言基础            重点内容：面向对象、集合">
+<meta property="og:type" content="website">
+<meta property="og:title" content="如果重回大二，我会这样学Java">
+<meta property="og:url" content="http://example.com/learning-path/index.html">
+<meta property="og:site_name" content="qyh - Java学长的自救手记">
+<meta property="og:description" content="写在前面的话   这条路线不是最快的，但绝对是我踩过无数坑后，最适合二本学生的路线。   当年我走了太多弯路：追求热门技术、只学不练、盲目刷算法题。现在回头看，其实掌握核心基础、多动手实践才是关键。   这是我回到母校给学弟学妹分享的经验总结，希望能帮你少走弯路。   🌱 第一阶段：夯实基础（2-3个月）        1. Java语言基础            重点内容：面向对象、集合">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/butterfly-icon.png">
+<meta property="article:published_time" content="2023-01-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-04-28T03:39:06.839Z">
+<meta property="article:author" content="Java学长">
+<meta property="article:tag" content="Java, 编程学习, 程序员, 自学编程, Java教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/butterfly-icon.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/learning-path/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '如果重回大二，我会这样学Java',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">qyh - Java学长的自救手记</span></a></span><div id="menus"></div></nav><div id="page-site-info"><h1 id="site-title">如果重回大二，我会这样学Java</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #2C3E50;">
+  <p style="font-weight: bold; font-size: 1.2em;">写在前面的话</p>
+  <p>这条路线不是最快的，但绝对是我踩过无数坑后，最适合二本学生的路线。</p>
+  <p>当年我走了太多弯路：追求热门技术、只学不练、盲目刷算法题。现在回头看，其实掌握核心基础、多动手实践才是关键。</p>
+  <p>这是我回到母校给学弟学妹分享的经验总结，希望能帮你少走弯路。</p>
+</div>
+
+<h2 id="🌱-第一阶段：夯实基础（2-3个月）"><a href="#🌱-第一阶段：夯实基础（2-3个月）" class="headerlink" title="🌱 第一阶段：夯实基础（2-3个月）"></a>🌱 第一阶段：夯实基础（2-3个月）</h2><div style="display: flex; margin-bottom: 30px;">
+  <div style="flex: 2; padding-right: 20px;">
+    <h3>1. Java语言基础</h3>
+    <ul>
+      <li><strong>重点内容</strong>：面向对象、集合框架、泛型、异常处理</li>
+      <li><strong>误区</strong>：很多人学了语法就开始做项目，结果连集合都用不好</li>
+      <li><strong>我的建议</strong>：
+        <ul>
+          <li>用一本《Java核心技术 卷I》或看韩顺平的Java基础教程（1.5倍速更佳）</li>
+          <li>必须动手实现：手写ArrayList、自己实现一个简单的HashMap</li>
+          <li>千万别只看不练，每个知识点都要有代码产出</li>
+        </ul>
+      </li>
+    </ul>
+
+<pre><code>&lt;h3&gt;2. 数据结构与算法初步&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;重点内容&lt;/strong&gt;：链表、栈、队列、树、排序算法&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;误区&lt;/strong&gt;：一开始就刷LeetCode难题，结果基础都不会&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;我的建议&lt;/strong&gt;：
+    &lt;ul&gt;
+      &lt;li&gt;先用Java实现每种数据结构，理解其工作原理&lt;/li&gt;
+      &lt;li&gt;从简单题开始：数组、链表操作，再到树的遍历&lt;/li&gt;
+      &lt;li&gt;我整理的&lt;a href=&quot;#&quot;&gt;LeetCode入门57题&lt;/a&gt;，循序渐进，建立信心&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+  </div>
+  
+  <div style="flex: 1; background-color: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+    <p style="font-weight: bold; color: #e74c3c;">⚠️ 新手避坑指南</p>
+    <ul>
+      <li><strong>不必过早学的</strong>：
+        <ul>
+          <li>❌ JVM调优（先会用-Xmx设置内存）</li>
+          <li>❌ 设计模式（掌握单例/工厂足矣）</li>
+          <li>❌ 微服务（连单体都不会，别想微服务）</li>
+        </ul>
+      </li>
+      <li><strong>一定要死磕的</strong>：
+        <ul>
+          <li>✅ 多线程安全（synchronized和Lock区别）</li>
+          <li>✅ SQL基础（一定要会手写复杂查询）</li>
+          <li>✅ 集合源码（知其然也知其所以然）</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<h2 id="🔨-第二阶段：web开发入门（3-4个月）"><a href="#🔨-第二阶段：web开发入门（3-4个月）" class="headerlink" title="🔨 第二阶段：web开发入门（3-4个月）"></a>🔨 第二阶段：web开发入门（3-4个月）</h2><div style="margin-bottom: 30px;">
+  <h3>1. 前端基础（不求精通，但求实用）</h3>
+  <ul>
+    <li><strong>重点内容</strong>：HTML/CSS/JavaScript、Vue.js基础</li>
+    <li><strong>我的学习顺序</strong>：
+      <ol>
+        <li>快速过一遍HTML/CSS，做出静态页面</li>
+        <li>学习JavaScript基础，理解DOM操作</li>
+        <li>使用Vue.js框架（只用最基本的组件和属性即可）</li>
+      </ol>
+    </li>
+    <li><strong>实战任务</strong>：制作个人简历网页 + 简易计算器</li>
+  </ul>
+
+  <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0;">
+    <p style="font-style: italic;">👉 真实经历：当年面试时，面试官让我在白板上手写一个轮播图的JS代码，我因为平时动手实践过，所以才能当场写出来。前端知识很实用，不要排斥学习！</p>
+  </div>
+
+  <h3>2. 后端基础</h3>
+  <ul>
+    <li><strong>重点内容</strong>：JDBC、Servlet、Spring、SpringMVC、MyBatis</li>
+    <li><strong>学习顺序</strong>：
+      <ol>
+        <li>JDBC连接数据库，实现基本CRUD</li>
+        <li>Servlet处理HTTP请求（不需要精通，了解原理即可）</li>
+        <li>Spring IoC和AOP（重点掌握，面试高频）</li>
+        <li>SpringMVC处理Web请求</li>
+        <li>MyBatis操作数据库</li>
+      </ol>
+    </li>
+    <li><strong>实战任务</strong>：搭建一个简单的博客系统，实现文章的增删改查</li>
+  </ul>
+
+  <h3>3. 数据库</h3>
+  <ul>
+    <li><strong>必学内容</strong>：MySQL基础、SQL优化、索引原理</li>
+    <li><strong>我的踩坑经历</strong>：当年只会简单CRUD，结果项目一多性能就垮了</li>
+    <li><strong>必做练习</strong>：
+      <ul>
+        <li>设计一个合理的数据库表结构（例如图书管理系统）</li>
+        <li>编写复杂SQL查询（连接查询、子查询、分组统计）</li>
+        <li>使用EXPLAIN分析SQL语句执行计划</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<h2 id="🚀-第三阶段：进阶项目实战（4-6个月）"><a href="#🚀-第三阶段：进阶项目实战（4-6个月）" class="headerlink" title="🚀 第三阶段：进阶项目实战（4-6个月）"></a>🚀 第三阶段：进阶项目实战（4-6个月）</h2><div style="margin-bottom: 30px;">
+  <h3>1. Spring Boot快速开发</h3>
+  <ul>
+    <li><strong>核心内容</strong>：自动配置、起步依赖、常用注解</li>
+    <li><strong>进阶内容</strong>：Spring Boot整合Redis、RabbitMQ等中间件</li>
+    <li><strong>实战项目</strong>：
+      <ul>
+        <li><a href="#">图书管理系统</a>（我的第一个项目，非常适合新手）</li>
+        <li>整合Swagger生成API文档</li>
+        <li>实现基于Spring Security的认证授权</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="project-card">
+    <div class="project-card-header">
+      <h4>📚 图书管理系统（我的第一个项目）</h4>
+    </div>
+    <div class="project-card-body">
+      <p>难度：⭐⭐☆☆☆ | 技术栈：Spring Boot + MyBatis + MySQL</p>
+      <p><strong>为什么推荐它？</strong></p>
+      <ul>
+        <li>比商城简单，但能覆盖CRUD全流程</li>
+        <li>容易扩展（我后来加了预约逾期罚款功能）</li>
+        <li>适合Spring Boot初学者</li>
+      </ul>
+      
+<pre><code>  &lt;p&gt;&lt;strong&gt;经典BUG现场&lt;/strong&gt;&lt;/p&gt;
+  &lt;pre style=&quot;background: #f5f5f5; padding: 10px; border-radius: 5px;&quot;&gt;&lt;code&gt;// 曾经写的垃圾代码
+</code></pre>
+<p>public void borrowBook(int bookId) {<br>    Book book &#x3D; bookDao.selectById(bookId);<br>    if (book.getStock() &gt; 0) {<br>        book.setStock(book.getStock()); &#x2F;&#x2F; 忘记-1！<br>    }<br>}</code></pre><br>    </div><br>    <div class="project-card-footer"><br>      <a href="#">GitHub仓库</a> | <a href="#">常见报错解决方案</a><br>    </div><br>  </div></p>
+  <h3>2. 分布式开发入门</h3>
+  <ul>
+    <li><strong>核心内容</strong>：Spring Cloud微服务、分布式事务、缓存</li>
+    <li><strong>学习建议</strong>：
+      <ul>
+        <li>不要急于学习复杂架构，先理解为什么要分布式</li>
+        <li>从单体应用开始，逐步拆分为微服务</li>
+        <li>重点掌握：服务注册发现、负载均衡、服务熔断</li>
+      </ul>
+    </li>
+    <li><strong>实战项目</strong>：<a href="#">在线商城系统</a>（分模块开发）</li>
+  </ul>
+
+  <h3>3. 性能优化与工程化</h3>
+  <ul>
+    <li><strong>必学内容</strong>：Git版本控制、Maven/Gradle、Linux基础</li>
+    <li><strong>进阶内容</strong>：JVM调优、MySQL优化、缓存设计</li>
+    <li><strong>实战任务</strong>：
+      <ul>
+        <li>使用JMeter进行压力测试，找出性能瓶颈</li>
+        <li>优化数据库查询（从2s到200ms的优化实战）</li>
+        <li>实现缓存机制（本地缓存 + Redis分布式缓存）</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<h2 id="📚-亲测有用的免费资源"><a href="#📚-亲测有用的免费资源" class="headerlink" title="📚 亲测有用的免费资源"></a>📚 亲测有用的免费资源</h2><div style="display: flex; flex-wrap: wrap; gap: 20px; margin: 20px 0;">
+  <div style="flex: 1; min-width: 250px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+    <h4>视频教程</h4>
+    <ul>
+      <li><a href="#">韩顺平Java基础</a> - 1.5倍速食用更佳</li>
+      <li><a href="#">尚硅谷Spring全家桶</a> - 精华在后半部分</li>
+      <li><a href="#">黑马程序员微服务实战</a> - 建议先看演示再动手</li>
+    </ul>
+  </div>
+  
+  <div style="flex: 1; min-width: 250px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+    <h4>我的精选笔记</h4>
+    <ul>
+      <li><a href="#">Java多线程核心知识</a> - 包含思维导图和示例代码</li>
+      <li><a href="#">Spring Bean生命周期详解</a> - 面试高频考点</li>
+      <li><a href="#">MySQL索引优化实战</a> - 从慢查询到毫秒级响应</li>
+    </ul>
+  </div>
+  
+  <div style="flex: 1; min-width: 250px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+    <h4>开源实战项目</h4>
+    <ul>
+      <li><a href="#">精简版图书管理系统</a> - 适合入门（附设计文档）</li>
+      <li><a href="#">Spring Boot博客系统</a> - 中等难度</li>
+      <li><a href="#">微服务电商平台</a> - 进阶项目（含部署文档）</li>
+    </ul>
+  </div>
+</div>
+
+<h2 id="🌟-写给迷茫的你"><a href="#🌟-写给迷茫的你" class="headerlink" title="🌟 写给迷茫的你"></a>🌟 写给迷茫的你</h2><div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+  <p>记得大二那年，看着网上铺天盖地的技术名词，我也曾迷茫无比。什么微服务、大数据、云原生...感觉永远学不完。</p>
+  
+  <p>现在回头看，其实技术学习是一个由点到面的过程：</p>
+  <ol>
+    <li><strong>先掌握核心基础</strong> - Java基础、数据结构、数据库</li>
+    <li><strong>再学习框架应用</strong> - Spring全家桶、MyBatis</li>
+    <li><strong>然后动手做项目</strong> - 从小项目开始，逐步增加复杂度</li>
+    <li><strong>最后拓展视野</strong> - 微服务、分布式、性能优化</li>
+  </ol>
+  
+  <p>技术没有捷径，但有方向。希望这份学习路线能为你指明方向，少走弯路。</p>
+  
+  <p>如果你正在学习中遇到困难，欢迎到<a href="/qa-wall/">深夜答疑墙</a>提问，我会尽力帮助你。</p>
+</div>
+
+<div style="text-align: center; margin: 40px 0;">
+  <a href="/projects/" class="custom-btn">查看适合新手的Java项目推荐 →</a>
+</div> </div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Java学长</div><div class="author-info-description">墨码斋 - 用真实踩坑史帮你少走弯路</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/06/welcome/" title="写给Java新手的一封信：我的编程挣扎与成长之路">写给Java新手的一封信：我的编程挣扎与成长之路</a><time datetime="2023-01-05T16:00:00.000Z" title="发表于 2023-01-06 00:00:00">2023-01-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/05/java-multithreading-basics/" title="写给新手的Java多线程入门：我的踩坑之路">写给新手的Java多线程入门：我的踩坑之路</a><time datetime="2023-01-04T16:00:00.000Z" title="发表于 2023-01-05 00:00:00">2023-01-05</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java%E5%9F%BA%E7%A1%80/"><span class="card-category-list-name">Java基础</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/"><span class="card-category-list-name">心得分享</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Java%E6%A0%B8%E5%BF%83/" style="font-size: 1.1em; color: #999">Java核心</a> <a href="/tags/%E7%A8%8B%E5%BA%8F%E5%91%98%E6%88%90%E9%95%BF/" style="font-size: 1.1em; color: #999">程序员成长</a> <a href="/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" style="font-size: 1.1em; color: #999">并发编程</a> <a href="/tags/Java%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">Java学习</a> <a href="/tags/%E6%88%90%E9%95%BF%E7%BB%8F%E5%8E%86/" style="font-size: 1.1em; color: #999">成长经历</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 1.1em; color: #999">多线程</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/01/">
+            <span class="card-archive-list-date">
+              一月 2023
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-04-28T06:42:26.201Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Java学长</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
